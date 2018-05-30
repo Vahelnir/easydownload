@@ -69,7 +69,10 @@ module.exports = class DownloadManager extends EventEmitter {
         this._streamspeed.add(stream)
         this.emit('download_start', dl)
       })
-      dl.on('finish', _ => processNext(dl))
+      dl.on('finish', _ => {
+        this.emit('download_finish', dl)
+        processNext(dl)
+      })
       dl.on('error', err => {
         this._error.push(dl)
         this.emit('download_error', err, dl)

@@ -70,6 +70,9 @@ Number of file to download at once
 ### Event: 'download_start'
 * `Download` - A Download instance
 
+### Event: 'download_finish'
+* `Download` - A Download instance
+
 ### Event: 'download_error'
 * `Error` - A Download instance
 * `Download` - A Download instance
