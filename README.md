@@ -1,5 +1,5 @@
-# dlmanager
-dlmanager is a library that helps us:
+# easydownload
+easydownload is a library that helps us:
  - Download multiple files
  - Get the download's speed
  - Parallel downloading
@@ -7,7 +7,7 @@ dlmanager is a library that helps us:
 # Usage
 **Single file**
 ```js
-const {Download} = require('dlmanager')
+const {Download} = require('easydownload')
 
 const download = new Download('some url', 'some local path')
 download.on('finish', _ => console.log('download is finished'))
@@ -18,7 +18,7 @@ download.start()
 
 **Multiple file**
 ```js
-const {DownloadManager} = require('dlmanager')
+const {DownloadManager} = require('easydownload')
 
 const manager = new DownloadManager
 

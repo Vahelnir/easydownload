@@ -1,18 +1,19 @@
 {
-  "name": "dlmanager",
+  "name": "easydownload",
   "version": "1.0.0",
   "description": "A library which manages downloads for you",
   "keywords": [
     "download",
     "manager",
-    "dl"
+    "dl",
+    "easy"
   ],
   "main": "./src/index.js",
   "author": "Vahelnir <vahelnir@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vahelnir/dlmanager"
+    "url": "https://github.com/Vahelnir/easydownload"
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
