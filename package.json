@@ -2,10 +2,18 @@
   "name": "dlmanager",
   "version": "1.0.0",
   "description": "A library which manages downloads for you",
+  "keywords": [
+    "download",
+    "manager",
+    "dl"
+  ],
   "main": "./src/index.js",
-  "scripts": {},
   "author": "Vahelnir <vahelnir@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vahelnir/dlmanager"
+  },
   "dependencies": {
     "mkdirp": "^0.5.1",
     "node-fetch": "^2.1.2",
