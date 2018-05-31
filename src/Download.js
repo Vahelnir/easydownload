@@ -67,7 +67,8 @@ class Download extends EventEmitter {
             this._fileStream.on('finish', _ => {
               this.state = STATES.FINISHED
               this.emit('finish')
-              this._fileStream.close()
+              this._readStream.destroy()
+              this._fileStream.destroy()
             })
           })
       } else
