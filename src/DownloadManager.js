@@ -59,8 +59,9 @@ module.exports = class DownloadManager extends EventEmitter {
 
       // Then we add some events
       const processNext = dl => {
+        // this._streamspeed.remove(dl.readStream)
         this._downloading = this._downloading.filter((_, key) => key !== this._downloading.indexOf(dl))
-        if (this._downloading.length === this._queue.length === 0)
+        if (this._downloading.length === 0 && this._queue.length === 0)
           this.emit('finish')
         else
           this._next()
