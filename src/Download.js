@@ -23,7 +23,7 @@ class Download extends EventEmitter {
     this._url = url
     this._path = path
     this._state = STATES.STANDBY
-    this._checksum = checksum
+    this._checksum = checksum || ''
     this._options = {
       maxRetries: 5,
       retryInterval: 2000
