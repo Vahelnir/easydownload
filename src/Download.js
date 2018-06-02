@@ -122,6 +122,7 @@ class Download extends EventEmitter {
 
   async _checkFile () {
     try {
+      this.emit('file_check')
       const hash = await md5File(this._path)
       return hash === this._checksum
     } catch (err) {

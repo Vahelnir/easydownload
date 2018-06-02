@@ -73,6 +73,12 @@ Number of file to download at once
 ### Event: 'download_finish'
 * `Download` - A Download instance
 
+### Event: 'download_retry'
+* `Download` - A Download instance
+
+### Event: 'download_file_check'
+* `Download` - A Download instance
+
 ### Event: 'download_error'
 * `Error` - A Download instance
 * `Download` - A Download instance
@@ -121,6 +127,8 @@ Destroys the download, and removes the file
 ### Event: 'resume'
 ### Event: 'stop'
 ### Event: 'destroy'
+### Event: 'retry'
+### Event: 'file_check'
 ### Event: 'finish'
 
 ### Event: 'error'
