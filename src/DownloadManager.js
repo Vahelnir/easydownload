@@ -73,6 +73,7 @@ module.exports = class DownloadManager extends EventEmitter {
         this.emit('download_finish', dl)
         processNext(dl)
       })
+      dl.on('retry', err => this.emit('download_retry', dl, err))
       dl.on('error', err => {
         this._error.push(dl)
         this.emit('download_error', err, dl)

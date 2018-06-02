@@ -1,6 +1,6 @@
 {
   "name": "easydownload",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A library which manages downloads for you",
   "keywords": [
     "download",
@@ -16,6 +16,7 @@
     "url": "https://github.com/Vahelnir/easydownload"
   },
   "dependencies": {
+    "md5-file": "^4.0.0",
     "mkdirp": "^0.5.1",
     "node-fetch": "^2.1.2",
     "streamspeed": "^1.1.1"
