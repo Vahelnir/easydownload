@@ -34,6 +34,7 @@ class Download extends EventEmitter {
     this._bytesDownloaded = 0
     this._fileStream = null
     this._readStream = null
+    this._headers = {}
   }
 
   start () {
@@ -86,8 +87,14 @@ class Download extends EventEmitter {
     // Creating the file stream
     // Getting the data from the http server
     // and piping it into the stream
-    fetch(this._url)
+    fetch(this._url, {headers: this._headers})
       .then(res => {
+        if(!res.ok) {
+          this.state = STATES.ERROR
+          this._error = 'HTTP Status is not in the range 200-299'
+          this.emit('error', this._error)
+          return
+        }
         this._fileStream = fs.createWriteStream(this._path)
         res.body.pipe(this._fileStream)
         this.state = STATES.STARTED
@@ -177,6 +184,10 @@ class Download extends EventEmitter {
 
   get error () {
     return this._error
+  }
+
+  withHeaders(headers) {
+    this._headers = Object.assign(this._headers, headers)
   }
 
 }

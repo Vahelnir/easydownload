@@ -23,7 +23,9 @@ module.exports = class DownloadManager extends EventEmitter {
    * @param {string} [checksum]
    */
   addToQueue (url, path, checksum) {
-    this._queue.push(new Download(url, path, checksum))
+    const download = new Download(url, path, checksum)
+    this._queue.push(download)
+    return download
   }
 
   /**

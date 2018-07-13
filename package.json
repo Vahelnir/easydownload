@@ -1,6 +1,6 @@
 {
   "name": "easydownload",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A library which manages downloads for you",
   "keywords": [
     "download",
